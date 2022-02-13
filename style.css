@@ -1,0 +1,104 @@
+*{margin:0px; padding:0px; box-sizing:border-box;}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.container{
+    width:100vw;
+    height:100vh;
+    background-color:#0f9ba5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+}
+.card{
+    width:340px;
+    height:380px;
+    background-color:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    z-index: 1;
+}
+.container .card img{
+    border:4px solid #fff;
+    border-radius:50%;
+    position:absolute;
+    top:90px;
+    left:50%;
+    transform:translateX(-50%);
+}
+#name{
+    width:100%;
+    margin-top:70px;
+    text-align:center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+#name span{
+    font-weight: 100;
+}
+#name p{
+    margin-top:10px;
+}
+#name span,p{
+    opacity:0.6;
+}
+#numbers{
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    padding:25px 30px;
+}
+.number{
+    text-align: center;
+}
+.number-name{
+    margin-top:5px;
+    font-size:0.8em;
+    letter-spacing: 1px;
+}
+#div-svg{
+    width:100%;
+    height:140px;
+    background:url(/images/bg-pattern-card.svg) no-repeat;
+}
+#svg-top{
+    position:absolute;
+    top:-600px;
+    left:-302px;
+    z-index: 1;
+    transform: translate(0px);
+    animation-name:svgTop;
+    animation-duration: 1s;
+}
+#svg-bottom{
+    position:absolute;
+    bottom:-680px;
+    right:-260px;
+    z-index: 1;
+    transform: translate(0px);
+    animation-name:svgBottom;
+    animation-duration: 1s;
+}
+/* ANIMATIONS */
+@keyframes svgTop {
+    0%{
+        transform: translate(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+@keyframes svgBottom {
+    0%{
+        transform: translate(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
